@@ -1,0 +1,210 @@
+/*************/
+/* [class]="!signupForm.get('userData.pword').valid && signupForm.get('userData.pword').touched ? 'error two fields' : 'field two fields'" */
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400);
+
+body{
+	background: url('http://tfgms.com/sandbox/dailyui/bg-1.jpg') center no-repeat;
+	background-size: cover;
+	color: #333;
+	font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  width: auto; 
+  height: 1300px;
+ 
+}
+
+.container{
+	border-radius: 0.5em;
+	box-shadow: 0 0 1em 0 rgba(51,51,51,0.25);
+	display: block;
+	max-width: 480px;
+	overflow: hidden;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 2em;
+	position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+	width: 98%;
+}
+.container:before{
+	background: url('http://tfgms.com/sandbox/dailyui/bg-1.jpg') center no-repeat;
+	background-size: cover;
+	content: '';
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	height: 100vh;
+	position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: -1;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100vw;
+}
+.container:after{
+	background: rgba(255,255,255,0.6);
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	width: 100%;
+}
+
+
+h1{
+	font-size: 3em;
+	margin: 0 0 0.5em 0;
+	text-align: center;
+	font-family: 'Cookie', cursive;
+}
+h1 img{
+	height: auto;
+	margin: 0 auto;
+	max-width: 240px;
+	width: 100%;
+}
+html{
+	font-size: 18px;
+	height: 100%;
+}
+
+.text-center{
+	text-align: center!;
+}
+
+
+/******************************************/
+.icon{
+  float: right;
+  margin-left: -25px;
+  margin-top: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+/******************************/
+.error-message {
+  color: #cc0033;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0 0;
+  font-weight: bold
+}
+
+/* .input-group .error-message {
+  display: none;
+} */
+
+
+/* Error Styling */
+
+.error label {
+  color: #cc0033;
+  font-weight: bold;
+}
+
+.error input[type=text] {
+  background-color: #fce4e4;
+  border: 1px solid #cc0033;
+  outline: none;
+}
+
+.error .error-message {
+  display: inline-block;
+}
+
+/***********************/
+/*submit button*/
+.bordered{
+  width: 100%;
+  text-align: center;
+}
+
+.submit{
+ width: 50%; 
+ }
+/*password input égalize size*/
+
+#passwordinputfield{
+margin-left: 1px;
+margin-right: 5px;
+}
+
+/*buttons gradient background*/
+.ui.violet.button{
+  background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+  background-size: 300% 100%;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+
+  border: 1px solid rgba(255, 255, 255,0.7);
+} 
+
+.ui.violet.button:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.ui.violet.button:focus {
+    outline: none;
+}
+
+/*remove bow shadow from ui segment - choose a secret question*/
+
+/*****************************************************************/
+/******************************/
+/* .error-message {
+    color: #cc0033;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 5px 0 0;
+  } 
+  
+  .input-group .error-message {
+    display: none;
+  }  */
+  
+  
+  /* Error Styling */
+  
+  /* .error label {
+    color: #cc0033;
+  }
+  
+  .error input[type=text] {
+    background-color: #fce4e4;
+    border: 1px solid #cc0033;
+    outline: none;
+  }
+  
+  .error .error-message {
+    display: inline-block;
+  } */
+   
+/**************************************/
+ /* .labelcss{
+    display: block;
+    margin: 0 0 .28571429rem 0;
+    color: rgba(0,0,0,.87);
+    font-size: .92857143em;
+    font-weight: 700;
+    text-transform: none;}  */

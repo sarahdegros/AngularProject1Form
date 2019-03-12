@@ -1,0 +1,154 @@
+<body>
+  
+
+<div class="container">
+    <header>
+        <h1>
+          <a href="#">
+            <img src="http://tfgms.com/sandbox/dailyui/logo-1.png" alt="Authentic Collection">
+          </a>
+        </h1>
+      </header>
+      <h1 class="text-center">Register</h1>
+  <form 
+    [formGroup]="signupForm"
+    class="ui form"
+    (ngSubmit)="onSubmit()">
+    <div formGroupName = "userData">
+      <!-- row1: first name and last name -->
+      <h4 class="ui dividing header ui">Personal Information</h4>
+      <div class="two fields ui form">  
+
+        <!-- first name -->
+        <div 
+          [class]="!signupForm.get('userData.ftname').valid && signupForm.get('userData.ftname').touched ? 'error' : 'field'">
+          <label for = "fname">First Name*</label>
+          <input 
+            type="text" 
+            id="fname"
+            formControlName="ftname">
+          <span 
+            class="error-message"
+            *ngIf="!signupForm.get('userData.ftname').valid && signupForm.get('userData.ftname').touched ">
+            Please enter First Name !          
+          </span>
+        </div>
+
+        <!-- last name -->
+        <div [class]="!signupForm.get('userData.ltname').valid && signupForm.get('userData.ltname').touched ? 'error' : 'field'">
+          <label for = "lname">Last Name*</label>
+          <input 
+            type="text" 
+            id="lname" 
+            formControlName="ltname">
+            <span 
+            class="error-message"
+            *ngIf="!signupForm.get('userData.ltname').valid && signupForm.get('userData.ltname').touched ">
+            Please enter Last Name
+            </span>           
+        </div>
+      </div> <!--row1 - class="two fields --> 
+
+       
+      <!-- row2: password  -->
+      <div 
+        [class]="!signupForm.get('userData.pword').valid && signupForm.get('userData.pword').touched ? 'error two fields' : 'field two fields'">  
+        <!-- password -->
+        <div [class]="!signupForm.get('userData.pword').valid && signupForm.get('userData.pword').touched ? 'error' : 'field'">
+          <label for = "pword">Password*</label>
+          <div id="passwordinputfield" class="two fields">
+          <input 
+            [type]="typev2" 
+            id="pword"
+            formControlName="pword">
+          <i 
+            [ngClass]="type ? 'low vision icon':'eye icon'" 
+            toggle="pword"
+            (click)="toggletype()">
+          </i>
+        </div>  
+          <span 
+          class="error-message"
+          *ngIf="!signupForm.get('userData.pword').valid && signupForm.get('userData.pword').touched ">
+          Password is required !
+          </span> 
+        </div>
+        
+         <!--button generate password -->   
+         <div class="field">  
+          <label [ngStyle]="{visibility: 'hidden'}">(Button )</label>
+            <button 
+              class="ui violet button"
+              type="button"
+              (click)="suggestPassword()"
+              >Generate Password</button>
+         </div>
+      </div> <!--row2 - password --> 
+
+       <!--row3 :  email -->
+       <div [class]="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched ? 'error ' : 'field '"> 
+          <label for="email">Email*</label>
+          <input 
+            type="text"
+            id="email"
+            formControlName="email">
+            <span
+            class="error-message"
+            *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched ">
+            Please enter a valid email!
+            </span>
+        </div> 
+       
+       <!--row 4 : gender -->
+       <div class="field">
+          <label >Gender*</label>
+          <div  *ngFor="let gender of genders">
+              <sui-radio-button
+              name="singleChoiceGenderButton"
+              formControlName="gender"
+              [value]="gender">{{ gender }}
+              </sui-radio-button>  
+          </div>
+       </div> 
+
+      <!-- row 5 : username --> 
+      <h4 class="ui dividing header">User Information</h4>
+      <div class="two fields">
+        <!--username -->
+        <div  [class]="!signupForm.get('userData.uname').valid && signupForm.get('userData.uname').touched ? 'error' : 'field'"> 
+          <label for="username">Username</label>
+          <input 
+            type="text"
+            id=username
+            formControlName="uname">
+          <span
+            class="error-message"
+            *ngIf="!signupForm.get('userData.uname').valid && signupForm.get('userData.uname').touched ">
+            Please enter a valid email!
+          </span>        
+        </div>
+         <!--button username -->
+         <div class="field">  
+            <label [ngStyle]="{visibility: 'hidden'}">(Button)</label>
+            <button 
+             class=" btn-hover ui violet button"
+             type="button"
+             (click)="suggestUsername()">Generate Username</button>
+          </div>
+        </div> 
+
+         
+    </div><!-- formGroupName = "userData" -->
+      
+   
+    
+    <div class="field">*Required fields</div>
+
+   <div class=" bordered">
+    <button class=" submit ui violet button" type="submit">Submit</button>
+  </div>
+  </form>
+</div> <!-- container -->
+
+
+</body>
